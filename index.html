@@ -2,102 +2,25 @@
 	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>Scrolling Text Page</title>
-	<link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@700&display=swap" rel="stylesheet" />
-	<style type="text/css">
-		body {
-			background-color: #000000;
-			margin: 0;
-			padding: 0;
-			width: 1920px;
-			height: 1080px;
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			justify-content: flex-start;
-			overflow: hidden;
-		}
-		.marquee-container {
-			width: 1920px;
-			height: 100px;
-			background-color: #333333;
-			overflow: hidden;
-			position: relative;
-			display: flex;
-			align-items: center;
-			padding: 20px 0 10px 0;
-		}
-		.marquee-text {
-			font-family: 'Sarabun', sans-serif;
-			font-size: 60px;
-			font-weight: 700;
-			color: #ffffff;
-			white-space: nowrap;
-			position: absolute;
-			animation: marquee 15s linear infinite;
-			text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-			letter-spacing: 2px;
-			line-height: 1;
-		}
-		@keyframes marquee {
-			0% { transform: translateX(1920px); }
-			100% { transform: translateX(-100%); }
-		}
-		img {
-			width: 1920px;
-			height: 980px;
-			display: block;
-			object-fit: contain;
-		}
-	</style>
+	
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+body {
+	background-color: #000000;
+}
+</style>
 </head>
 <body>
-	<div class="marquee-container">
-		<span class="marquee-text">งานนี้มี 'ตบ' ศึกแข่งวอลเลย์บอล กระชับมิตร พบกันวันที่ 19 ก.ค. 2568 (สมัครได้ที่พี่หนิง)</span>
-	</div>
-	<img src="products-img/19-7-68_1.jpg" alt="Product Image" />
+<img src="products-img/123.gif" alt="" width="1907" height="1052" />
 
-	<script>
-		let wakeLock = null;
 
-		// ฟังก์ชันสำหรับขอ Screen Wake Lock
-		const requestWakeLock = async () => {
-			if ('wakeLock' in navigator) {
-				try {
-					wakeLock = await navigator.wakeLock.request('screen');
-					console.log('Screen Wake Lock ถูกขอแล้ว: หน้าจอจะไม่ดับ');
-					// เพิ่ม event listener เพื่อจับการถูกปล่อยล็อคอัตโนมัติ
-					wakeLock.addEventListener('release', () => {
-						console.log('Screen Wake Lock ถูกปล่อยโดยระบบ');
-					});
-				} catch (err) {
-					// อาจเกิดข้อผิดพลาดถ้าผู้ใช้ปฏิเสธหรือเบราว์เซอร์ไม่รองรับ
-					console.error(`ไม่สามารถขอ Screen Wake Lock ได้: ${err.name}, ${err.message}`);
-				}
-			} else {
-				console.warn('เบราว์เซอร์นี้ไม่รองรับ Screen Wake Lock API');
-			}
-		};
 
-		// ขอ wake lock เมื่อหน้าเว็บโหลดสมบูรณ์
-		document.addEventListener('DOMContentLoaded', requestWakeLock);
+<BODY BGCOLOR="#000000"></BODY>
 
-		// จัดการเมื่อหน้าเว็บมีการเปลี่ยนแปลงสถานะ (เช่น สลับแท็บหรือกลับมาที่แท็บ)
-		document.addEventListener('visibilitychange', async () => {
-			if (wakeLock !== null && document.visibilityState === 'visible') {
-				await requestWakeLock(); // พยายามขอ lock ใหม่เมื่อกลับมาที่แท็บที่มองเห็นได้
-			}
-		});
+<META HTTP-EQUIV='Refresh' CONTENT = '100;URL=https://rqphr.github.io/rq/'>
 
-		// เพื่อให้มั่นใจว่า wake lock ถูกปล่อยเมื่อหน้าเว็บปิด
-		window.addEventListener('beforeunload', () => {
-			if (wakeLock) {
-				wakeLock.release();
-				wakeLock = null;
-				console.log('Screen Wake Lock ถูกปล่อยเมื่อหน้าเว็บปิด');
-			}
-		});
-	</script>
+
+
+
 </body>
 </html>
