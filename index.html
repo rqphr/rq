@@ -2,66 +2,26 @@
 	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>Scrolling Text Page</title>
-	<link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@700&display=swap" rel="stylesheet" />
-	<style type="text/css">
-		body {
-			background-color: #000000;
-			margin: 0;
-			padding: 0;
-			width: 1920px;
-			height: 1080px;
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			justify-content: flex-start;
-			overflow: hidden;
-		}
-		.marquee-container {
-			width: 1920px;
-			height: 100px;
-			background-color: #333333;
-			overflow: hidden;
-			position: relative;
-			display: flex;
-			align-items: center;
-			padding: 20px 0 10px 0;
-		}
-		.marquee-text {
-			font-family: 'Sarabun', sans-serif;
-			font-size: 60px;
-			font-weight: 700;
-			color: #ffffff;
-			white-space: nowrap;
-			position: absolute;
-			animation: marquee 15s linear infinite;
-			text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-			letter-spacing: 2px;
-			line-height: 1;
-		}
-		@keyframes marquee {
-			0% { transform: translateX(1920px); }
-			100% { transform: translateX(-100%); }
-		}
-		img {
-			width: 1920px;
-			height: 980px;
-			display: block;
-			object-fit: contain;
-		}
-	</style>
+	
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+body {
+	background-color: #000000;
+}
+</style>
 </head>
 <body>
-	<div class="marquee-container">
-		<span class="marquee-text">เริ่มติดตั้ง Windows 11 วันที่ 18-19 มิถุนายน 2568 เวลา 20 : 00 น. (ใช้เวลา 2 ชม.)​</span>
-	</div>
-	<img src="products-img/18-6-68-1.jpg" alt="Product Image" />
+<img src="products-img/123.gif" alt="" width="1907" height="1052" />
 
-	<script>
+
+
+<BODY BGCOLOR="#000000"></BODY>
+
+<META HTTP-EQUIV='Refresh' CONTENT = '300;URL=https://rqphr.github.io/rq/'>
+
+<script>
 		let wakeLock = null;
-
-		// ฟังก์ชันสำหรับขอ Screen Wake Lock
+// ฟังก์ชันสำหรับขอ Screen Wake Lock
 		const requestWakeLock = async () => {
 			if ('wakeLock' in navigator) {
 				try {
@@ -98,22 +58,7 @@
 				console.log('Screen Wake Lock ถูกปล่อยเมื่อหน้าเว็บปิด');
 			}
 		});
-
-		// --- เพิ่มโค้ดส่วนนี้ ---
-		// ฟังก์ชันสำหรับรีเฟรชหน้าจอ
-		function refreshPage() {
-			console.log('Refreshing page now...');
-			window.location.reload();
-		}
-
-		// ตั้งเวลาให้รีเฟรชทุก 5 นาที (5 นาที * 60 วินาที * 1000 มิลลิวินาที)
-		const refreshInterval = 5 * 60 * 1000;
-		setInterval(refreshPage, refreshInterval);
-		// --- สิ้นสุดโค้ดส่วนที่เพิ่ม ---
-
-
-
-
 	</script>
+
 </body>
 </html>
